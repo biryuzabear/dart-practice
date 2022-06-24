@@ -2,6 +2,11 @@ import '2_binary.dart';
 import '1_gcd_lcm_primes.dart';
 import '3_get_nums.dart';
 import '4_how_many_map.dart';
+import '5_english_words.dart';
+import '6_point.dart';
+import '7_pow.dart';
+import '8_user.dart';
+// import '7_pow.dart';
 
 void main() {
   print(gcd(245, 56));
@@ -11,4 +16,29 @@ void main() {
   print(toDecimal('1010101001'));
   print(getNums('123 adfa 123 asdf 123123 asdf 4324 546 sdfg'));
   print(howMany(['1231','1231','1','1','1']));
+  print(getInts( 'one, two, zero, zero'));
+  print(Point.origin());
+  print(Point(1,2,3));
+  print(Point.origin().distanceTo(Point.unit()));
+  print(3.pow(2));
+  print(81.sqrt(4, 0.00000001));
+  print(-81.sqrt(4, 0.00000001));
+  print("=================================================================");
+  var userManager = UserManager();
+  var user1 = User("email1@gmail1.com");
+  var user2 = GeneralUser("email2@gmai2.com");
+  var user3 = AdminUser("email3@gmail3.com");
+  var user4 = GeneralUser("email4@gmail4.com");
+  var user5 = AdminUser("email5@gmail5.com");
+  userManager.add(user1);
+  userManager.add(user2);
+  userManager.add(user3);
+  userManager.add(user4);
+  userManager.add(user5);
+  userManager.getAllMails();
+  print("=============After removing===========================");
+  userManager.remove(user1);
+  userManager.remove(user2);
+  userManager.remove(user3);
+  userManager.getAllMails();
 }
